@@ -1,4 +1,4 @@
-job("generate_ansible_dls"){
+job("jenkins_child_from_git"){
   description("my dis job first 1")
   scm{github('wuwenhao2000/ansible','master')}
   triggers {githubPush()}
