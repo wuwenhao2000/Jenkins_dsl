@@ -1,4 +1,4 @@
-job("jenkins_child_from_git2"){
+job("jenkins_child_from_git"){
   description("generate from seed_job pushed by Github")
   scm{github('wuwenhao2000/ansible','master')}
   triggers {githubPush()}
