@@ -17,3 +17,33 @@ pipeline {
       unstable{echo "this will run only unstable"}}}
   stage('Test'){
       steps {echo "Test something"}}}}
+  
+
+
+
+
+
+
+
+stage('Test'){
+      steps {
+          echo "Test something"}
+          }
+stage('Deployment'){
+      steps {
+          echo "Deploy something"}
+      }
+retry(3){
+      sh 'I am here with mistake'
+      }
+timeout(time:3,unit:"SECONDS"){
+      sh 'sleep 5'
+      sh 'ls -al'
+      }
+steps {
+      retry(3){
+      sh 'echo "Build something"'
+      sh 'pwd'
+      sh 'ls -al'
+      }
+}
