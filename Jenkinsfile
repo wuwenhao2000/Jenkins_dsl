@@ -9,7 +9,7 @@ pipeline{
       sh 'echo "Build something"'
       sh 'pwd'
       sh 'ls -al'
-      sh 'echo my name is $NAME and I am $ROLE ; exit 0'}
+      sh 'echo my name is $NAME and I am $ROLE ; exit 1'}
   post {
       always{echo "this will always run"}
       success{echo "this will run only success"}
